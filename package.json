@@ -4,6 +4,7 @@
   "description": "A CORS proxy server for fetching and streaming files.",
   "author": "Yuchen Wang <contact@wangyuchen.cn>",
   "license": "MIT",
+  "homepage": "https://yc-w-cn.github.io/easy-cors-proxy",
   "repository": {
     "type": "git",
     "url": "https://github.com/yc-w-cn/easy-cors-proxy.git"
@@ -20,7 +21,8 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "deploy": "gh-pages -d homepage -t true"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -44,6 +46,7 @@
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^6.1.1",
     "jest": "^29.5.0",
     "prettier": "^2.8.8",
     "source-map-support": "^0.5.21",
