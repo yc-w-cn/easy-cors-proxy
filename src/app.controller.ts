@@ -50,9 +50,7 @@ export class AppController {
     @Res() res,
     @Next() next,
   ) {
-    this.debug(
-      `Start handle proxy with: ${JSON.stringify({ url, accessToken })}`,
-    );
+    this.debug(`Handle proxy with URL: ${url}`);
 
     if (!accessToken || !url) {
       throw new HttpException(
@@ -62,10 +60,12 @@ export class AppController {
     }
 
     if (!this.authService.validate(accessToken)) {
+      this.debug(`Invalid ACCESS_TOKEN: ${accessToken}`);
       throw new HttpException('Invalid ACCESS_TOKEN', HttpStatus.UNAUTHORIZED);
     }
 
     if (!isURLValid(url)) {
+      this.debug(`Invalid URL: ${url}`);
       throw new HttpException('Invalid URL', HttpStatus.BAD_REQUEST);
     }
 
@@ -75,6 +75,9 @@ export class AppController {
     );
 
     if (this.proxyingCount >= maxProxingCount) {
+      this.debug(
+        `Too many proxy requests in progress, current: ${this.proxyingCount}`,
+      );
       throw new HttpException(
         'Too many proxy requests in progress',
         HttpStatus.TOO_MANY_REQUESTS,
