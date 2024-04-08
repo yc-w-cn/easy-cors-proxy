@@ -120,7 +120,11 @@ export class AppController {
       recentLogs: this.logStack.getLogs(),
       timestamp: new Date().getTime(),
     };
-    this.debug(`Show service status: ${JSON.stringify(status)}.`);
+    this.debug(
+      `Show service status: ${JSON.stringify({
+        proxyingCount,
+      })}.`,
+    );
     return status;
   }
 }
