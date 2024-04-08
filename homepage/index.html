@@ -31,14 +31,25 @@
       background-color: #444;
       color: #fff;
       text-align: center;
-      padding: 10px;
     }
 
     nav a {
+      display: inline-block;
       color: #fff;
       text-decoration: none;
-      margin: 0 5px;
-      padding: 10px;
+      margin: 0 10px;
+      padding: 10px 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+      nav a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 0 2px;
+        padding: 10px 2px;
+      }
     }
 
     nav a:hover {
@@ -48,7 +59,7 @@
     .container {
       max-width: 800px;
       margin: auto;
-      padding: 180px 20px 100px 20px;
+      padding: 160px 20px 80px 20px;
       text-align: center;
     }
 
@@ -89,11 +100,14 @@
   </header>
   <div class="container">
     <section id="about">
-      <h2>About Easy CORS Proxy</h2>
-      <p>Easy CORS Proxy is a lightweight HTTP server designed to simplify Cross-Origin Resource Sharing (CORS) issues
-        encountered during web development. CORS restrictions often prevent web applications from accessing resources
-        hosted on different domains due to security concerns. This proxy facilitates seamless communication between web
-        applications and external resources by bypassing CORS restrictions.</p>
+      <h2>About</h2>
+      <div class="feature">
+        <p>Easy CORS Proxy is a lightweight HTTP server designed to simplify Cross-Origin Resource Sharing (CORS) issues
+          encountered during web development. CORS restrictions often prevent web applications from accessing resources
+          hosted on different domains due to security concerns. This proxy facilitates seamless communication between
+          web
+          applications and external resources by bypassing CORS restrictions.</p>
+      </div>
     </section>
     <section id="features">
       <h2>Features</h2>
@@ -115,20 +129,26 @@
     </section>
     <section id="download">
       <h2>Download</h2>
-      <p>Easy CORS Proxy is available for download on GitHub. Get started now!</p>
-      <a href="https://github.com/yc-w-cn/easy-cors-proxy" target="_blank">Download on GitHub</a>
+      <div class="feature">
+        <p>Easy CORS Proxy is available for download on GitHub. Get started now!</p>
+        <a href="https://github.com/yc-w-cn/easy-cors-proxy" target="_blank">Download on GitHub</a>
+      </div>
     </section>
     <section id="contribute">
       <h2>Contribute</h2>
-      <p>Contributions to the Easy CORS Proxy project are welcome! Feel free to submit issues or pull requests on the
-        GitHub repository.</p>
-      <a href="https://github.com/yc-w-cn/easy-cors-proxy" target="_blank">Contribute on GitHub</a>
+      <div class="feature">
+        <p>Contributions to the Easy CORS Proxy project are welcome! Feel free to submit issues or pull requests on the
+          GitHub repository.</p>
+        <a href="https://github.com/yc-w-cn/easy-cors-proxy" target="_blank">Contribute on GitHub</a>
+      </div>
     </section>
     <section id="license">
       <h2>License</h2>
-      <p>Easy CORS Proxy is licensed under the MIT License. See the <a
-          href="https://github.com/yc-w-cn/easy-cors-proxy/LICENSE" target="_blank">LICENSE</a> file
-        for details.</p>
+      <div class="feature">
+        <p>Easy CORS Proxy is licensed under the MIT License. See the <a
+            href="https://github.com/yc-w-cn/easy-cors-proxy/LICENSE" target="_blank">LICENSE</a> file
+          for details.</p>
+      </div>
     </section>
   </div>
   <footer>
