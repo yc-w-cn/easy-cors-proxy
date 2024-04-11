@@ -99,6 +99,7 @@ export class AppController {
         changeOrigin: true,
         pathRewrite: { [`^/proxy`]: '' }, // Remove '/proxy' from the path
         followRedirects: true,
+        ignorePath: true,
       });
 
       proxy(req, res, next);
